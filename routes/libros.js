@@ -50,12 +50,6 @@ router.delete('/:id', requiredScopes("write:libros"), async (req, res) => {
     }
 });
 
-module.exports = router;const express = require("express");
-const router = express.Router();
-
-// importamos el tipo de dato de Libro, definido en la base de datos de mongoose
-const Libro = require("../models/Libro");
-
 // Ruta para obtener todos los libros
 router.get("/", async (req, res) => {
     try {
