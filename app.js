@@ -19,9 +19,6 @@ app.use(express.json());
 // Importamos el Router de Libros
 const librosRouter = require('./routes/libros');
 
-// Importamos el Middleware Error Handler
-const errorHandler = require('./middleware/errorHandler');
-
 app.use('/libros', librosRouter);
 // Configuramos el middleware de autenticación
 app.use('/libros', autenticacion, librosRouter);
